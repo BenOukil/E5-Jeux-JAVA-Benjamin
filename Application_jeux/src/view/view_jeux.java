@@ -62,7 +62,7 @@ public class view_jeux {
 		
 		JLabel lblSubTitle = new JLabel("Veuillez sélectionnez un jeu au choix :");
 		lblSubTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSubTitle.setFont(new Font("Tahoma", Font.ITALIC, 12));
+		lblSubTitle.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblSubTitle.setBounds(10, 65, 762, 29);
 		frame.getContentPane().add(lblSubTitle);
 		
@@ -87,6 +87,12 @@ public class view_jeux {
 		frame.getContentPane().add(btnCalculatrice);
 		
 		JButton btnShifumi = new JButton("Shifumi");
+		btnShifumi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				App5 viewapp5 = new App5();
+			}
+		});
 		btnShifumi.setBounds(434, 153, 150, 125);
 		frame.getContentPane().add(btnShifumi);
 		
@@ -99,5 +105,29 @@ public class view_jeux {
 		});
 		btnBatailleNavale.setBounds(622, 153, 150, 125);
 		frame.getContentPane().add(btnBatailleNavale);
+		
+		JButton btnCalculatrice_1 = new JButton("Calculatrice");
+		btnCalculatrice_1.setBounds(331, 338, 150, 125);
+		frame.getContentPane().add(btnCalculatrice_1);
+		
+		JButton btnDevine_1 = new JButton("Devine Nombre !");
+		btnDevine_1.setBounds(136, 338, 150, 125);
+		frame.getContentPane().add(btnDevine_1);
+		
+		JButton btnShifumi_1 = new JButton("Shifumi");
+		btnShifumi_1.setBounds(529, 338, 150, 125);
+		frame.getContentPane().add(btnShifumi_1);
+		
+		JLabel lblMateo = new JLabel("Version Matéo :");
+		lblMateo.setFont(new Font("Tahoma", Font.ITALIC, 10));
+		lblMateo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMateo.setBounds(10, 304, 762, 12);
+		frame.getContentPane().add(lblMateo);
+		
+		JLabel lblBenjamin = new JLabel("Version Benjamin :");
+		lblBenjamin.setFont(new Font("Tahoma", Font.ITALIC, 10));
+		lblBenjamin.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBenjamin.setBounds(10, 104, 762, 12);
+		frame.getContentPane().add(lblBenjamin);
 	}
 }
